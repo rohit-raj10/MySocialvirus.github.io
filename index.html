@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main center">
+        <div class="box center">
+            <img src="profile.jpg" alt="">
+            <div>
+                <p class="user_name">Rohit Raj</p>
+                <p class="skill">AI&ML Student</p>
+            </div>
+            <div class="arr_container center ">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="left_container off">
+                <p>My Skills</p>
+                <div class="skills">
+                    <div>Front-End</div>
+                    <div>Java</div>
+                    <div>Python</div>
+                </div>
+                <div class="icons">
+                    <a href="https://github.com/rohit-raj10" class="fab fa-github"></a>
+                    <a href="https://www.linkedin.com/in/irohitraj" class="fab fa-linkedin"></a>
+                    <a href="https://www.instagram.com/rohit10.ig" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/rohit10.fb" class="fab fa-facebook"></a>
+                </div>
+                <div class="cancel center">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const clc = document.querySelector(".cancel");
+        const arr = document.querySelector(".arr_container");
+        const left_container = document.querySelector(".left_container");
+
+        arr.addEventListener("click", ()=>{
+            arr.classList.add("active_arr");
+            if(left_container.classList.contains("off")){
+                left_container.classList.remove("off");
+                left_container.classList.add("active");
+            }
+        });
+        clc.addEventListener("click", ()=>{
+            arr.classList.remove("active_arr");
+            if(left_container.classList.contains("active")){
+                left_container.classList.remove("active");
+                left_container.classList.add("off");
+            }
+        });
+    </script>
+</body>
+</html>
